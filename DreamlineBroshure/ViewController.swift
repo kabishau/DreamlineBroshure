@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var menuHeightConstraint: NSLayoutConstraint!
     
     // class variables
     var isMenuOpen = false
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBAction func toggleFinishes(_ sender: UIButton) {
         
         isMenuOpen = !isMenuOpen
-        menuHeightConstraint.constant = isMenuOpen ? 200.0 : 50.0
+        heightConstraint.constant = isMenuOpen ? 200.0 : 50.0
         
     }
     
