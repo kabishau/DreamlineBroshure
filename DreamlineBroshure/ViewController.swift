@@ -9,15 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var menuHeightConstraint: NSLayoutConstraint!
+    
+    // class variables
+    var isMenuOpen = false
+    
+    @IBAction func toggleFinishes(_ sender: UIButton) {
+        
+        isMenuOpen = !isMenuOpen
+        menuHeightConstraint.constant = isMenuOpen ? 200.0 : 50.0
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
